@@ -8,6 +8,11 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 // components/Header.js
 const Header = () => {
   const [profile, setProfile] = useState(null);
+  const [showBtn, setShowBtn] = useState(false);
+  const logout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/login";
+  };
 
   useEffect(() => {
     getProfile(setProfile);
@@ -23,7 +28,16 @@ const Header = () => {
         width={50}
         height={50}
         className="rounded-full"
+        onMouseEnter={() => setShowBtn((prev) => !prev)}
       />
+      {showBtn && (
+        <button
+          onClick={logout}
+          className="text-white px-4 py-2 rounded-md bg-[#212121]"
+        >
+          Logout
+        </button>
+      )}
     </div>
   );
 };
