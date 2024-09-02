@@ -3,12 +3,10 @@
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import { redirect } from "next/navigation";
-import Modal from "./Modal";
-import { useState } from "react";
 
 const DashboardLayout = ({ children }) => {
   //use token to protected this and navigate to login page
-  const token = localStorage.getItem("token");
+  const token = window.localStorage.getItem("token");
   if (!token) {
     return redirect("/login");
   }
