@@ -30,7 +30,7 @@ const PersonalInfo = () => {
     },
     {
       heading1: "Gender",
-      subTitle1: "Female",
+      subTitle1: "male",
       heading2: "Nationality",
       subTitle2: "Egypt",
     },

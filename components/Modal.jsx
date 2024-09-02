@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Modal = ({ setShowModal }) => {
   const [state, setState] = useState({
     name: "",
