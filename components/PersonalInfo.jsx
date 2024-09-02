@@ -12,15 +12,15 @@ const PersonalInfo = () => {
   const personalContent = [
     {
       heading1: "First Name",
-      subTitle1: profile?.first_name,
+      subTitle1: profile?.first_name || "first name",
       heading2: "Last Name",
-      subTitle2: profile?.last_name,
+      subTitle2: profile?.last_name || "last name",
     },
     {
       heading1: "Mobile Number",
-      subTitle1: profile?.phone,
+      subTitle1: profile?.phone || "01254544445454",
       heading2: "Email Address",
-      subTitle2: profile?.email,
+      subTitle2: profile?.email || "test@example.com",
     },
     {
       heading1: "Date of Birth",

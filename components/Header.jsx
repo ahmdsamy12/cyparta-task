@@ -18,8 +18,8 @@ const Header = () => {
         <IoMdNotificationsOutline size={25} />
       </div>
       <Image
-        src={profile?.image}
-        alt={profile?.name}
+        src={profile?.image || "/user.png"}
+        alt={profile?.name || "user"}
         width={50}
         height={50}
         className="rounded-full"

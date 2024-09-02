@@ -8,7 +8,6 @@ import { getProfile } from "@/api";
 
 const ProfileHeader = ({ setShowModal }) => {
   const [profile, setProfile] = useState(null);
-  console.log(profile);
 
   useEffect(() => {
     getProfile(setProfile);
@@ -24,22 +23,22 @@ const ProfileHeader = ({ setShowModal }) => {
         <div className="flex items-center justify-between ">
           <div className="user-info flex items-center gap-4">
             <Image
-              src={profile?.image || ""}
+              src={profile?.image || "/user.png"}
               alt="user"
               width={100}
               height={100}
             />
             <div>
               <h3 className="font-semibold text-[24px] mb-2">
-                {profile?.name}
+                {profile?.name || "Full Name"}
               </h3>
               <p className="flex items-center gap-2 text-[#16151C]">
                 <BiShoppingBag />
-                {profile?.bio}
+                {profile?.bio || "Bio"}
               </p>
               <p className="flex items-center gap-2 text-[#16151C]">
                 <MdOutlineMailOutline />
-                {profile?.email}
+                {profile?.email || "test@example.com"}
               </p>
             </div>
           </div>
