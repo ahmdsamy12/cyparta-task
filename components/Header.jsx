@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 // components/Header.js
+// components/Header.js
 const Header = () => {
   const [profile, setProfile] = useState(null);
   const [showBtn, setShowBtn] = useState(false);
